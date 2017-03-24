@@ -5,34 +5,125 @@ blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,
     list-style-type:none;
     text-decoration:none;
 }
-body,html{
+body,html,.container{
     height:100%;
-}
-.header{
-    width: 100%;
-    height:10%;
 }
 .main,.info,.list{
     float: left;
-    height:90%;
+    height:100%;
 }
 .main{
+
     width: 100%;
 }
 .content{
     height:100%;
-    margin-left:200px;
-    margin-right:300px;
-    background: red;
+    margin-left:210px;
+    margin-right:310px;
+    background: #ffe569;
 }
-
 .info{
     width:200px;
     margin-left:-100%;
     background: rgba(26, 4, 24, 0.5);
 }
+
+/*文章列表样式调整*/
 .list{
+    overflow: auto;
     width:300px;
     margin-left:-300px;
-    background: blue;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.article-list{
+    color:#f7fff6;
+    padding-left:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+    margin:10px 0;
+    width:260px;
+    height:100px;
+    -webkit-border-radius:1.5em;
+    -moz-border-radius:1.5em;
+    border-radius:1.5em;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+
+}
+.article-list p{
+
+    text-overflow:ellipsis;
+}
+.article-list:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+}
+
+/*搜索框样式调整*/
+.search{
+    width:230px;
+    -webkit-border-radius:1.5em;
+    -moz-border-radius:1.5em;
+    border-radius:1.5em;
+}
+
+/*界面响应式布局*/
+@media screen and (max-width:1000px){
+    .content{
+        margin-left:0;
+        margin-right:180px;
+    }
+    .info{
+        display:none;
+    }
+    .list{
+        width:180px;
+        margin-left:-180px;
+    }
+    .article-list{
+        width:140px;
+    }
+    .search{
+        width:160px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .content{
+        margin-left:0;
+        margin-right:100px;
+    }
+
+    .list{
+        width:100px;
+        margin-left:-100px;
+    }
+    .article-list{
+        width:60px;
+    }
+    .article-list p{
+        display:none;
+    }
+    .search{
+        width:90px;
+    }
+}
+
+/*个人信息样式调整*/
+.profile{
+    margin-top:200px;
+    width:200px;
+    height:300px;
+    text-align: center;
+}
+
+.profile img{
+    width:100px;
+    height:100px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    border:1px solid #cb6c34;
+    /*margin-left:50px;*/
 }
