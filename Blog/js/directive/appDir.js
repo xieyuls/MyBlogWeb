@@ -14,7 +14,7 @@ dir.directive('articleList',function(){
                      </div>',
         link:function (scope, element) {
             element.bind("click",function(){
-                scope.set(scope.list.id-1);
+                scope.fresh(scope.list.id-1);
                 console.log(scope.get(scope.list.id-1));
             });
         }
