@@ -21,7 +21,7 @@ app.controller('ListCtl',function ($scope,ListService) {
 //文章内容视图控制器
 app.controller('articleCtl',function ($scope,ListService) {
     //首先声明一个空对象作为保存内容的容器
-            $scope.article=ListService.get(0);
+            $scope.article={title:'关于我的博客',content:'欢迎来到我的个人博客，这个博客将会持续改进，目前是1.0版本！',description:'点击该处开启我的文章列表'};
     //设置get方法，从服务中获取最新的文章内容
             $scope.get=function(id){
                 $scope.article=ListService.get(id);
