@@ -13,7 +13,7 @@ angular.module('appService',[])
                 lists=data.articleList;
             });
         };
-
+        service.syn();
         service.get=function(id){
             service.syn();
             return lists[id];
