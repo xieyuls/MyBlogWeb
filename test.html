@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var twoSum = function(numbers, target) {
+        var save={};
+        var res=[];
+        for(var i=0;i<numbers.length;i++){
+            if(save.hasOwnProperty(numbers[i])){
+                res[0]=save[numbers[i]]<i?save[numbers[i]]:i;
+                res[1]=save[numbers[i]]>i?save[numbers[i]]:i;
+            }
+            save[target-numbers[i]]=i;
+        }
+        return res;
+    };
+    twoSum([2,3,4],6);
+</script>
+</body>
+</html>
